@@ -1,0 +1,573 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    scroll-behavior: smooth;
+
+}
+
+.section-title{
+    font-size: 25px;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 60px;
+    padding-bottom: 10px;
+    position: relative;
+
+}
+.section-title::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 100px;
+    height: 3px;
+    background: red;
+    transform: translate(-50%);
+}
+
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+
+
+/* Introduction Page*/
+.home{
+    display: flex;
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("./img/nasaearth.jpg") no-repeat center;
+    height: 100vh;
+    color: whitesmoke;
+    min-height: 500px;
+    background-position: top center;
+    background-size: cover;
+    
+}
+
+.home .max-width{
+    margin: auto 0 auto 40px;
+}
+
+.home .home-content .text-1{
+    font-size: 27px;
+}
+
+.home .home-content .text-2{
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+
+.home .home-content .text-3{
+    font-size: 40px;
+    margin: 5px 0;
+}
+
+.home .home-content .text-3 span{
+    color: red;
+    font-weight: 600;
+}
+
+.home .max-width .table ul li{
+    display: inline;
+    margin: 20px;
+    font-size: 30px;
+    
+}
+
+.home .max-width .table ul li a{
+    color: white;
+}
+
+.home .max-width .table ul li a:hover{
+    color: red;
+}
+
+.home .max-width .table{
+    display: table;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* End of Introduction*/
+
+/*Nav Bar */
+.navbar{
+    position: fixed;
+    width: 100%;
+    padding: 30px 0;
+    z-index: 1;
+    
+}
+.navbar.sticky{
+    padding: 15px 0;
+    background: black;
+}
+
+
+.navbar .logo a{
+    font-size: 35px;
+    font-weight: 600;
+    color: white;
+
+}
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a span{
+    color: crimson;
+}
+
+.navbar .menu li a{
+    display: block;
+    color: whitesmoke;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+
+.navbar .menu li a:hover {
+    color: crimson;
+
+}
+
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+
+.menu-btn{
+    color: white;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+    
+}
+.scroll-up-btn{
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: red;
+    right: 30px;
+    bottom: 30px;
+    text-align: center;
+    line-height: 45px;
+    color: white;
+    z-index: 9999;
+    font-size: 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.scroll-up-btn.show{
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+
+/*End of Nav bar */
+
+/* Start of About Me*/
+
+#about{
+    background: whitesmoke;
+    color: rgb(87, 85, 85);
+    width: 100%;
+    align-items: center;
+    min-height: 100vh;
+    height: 100%;
+    padding: 100px 0;
+}
+
+.about-text{
+    font-size: 20px;
+    text-align: center;
+    margin-top: 70px;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.about-text a{
+    display: inline-block;
+    background: red;
+    color: white;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: 2px solid red;
+    transition: all 0.3s ease;
+}
+
+.about-text a:hover{
+    color: red;
+    background: none;
+
+}
+
+
+#technical{
+    margin-top: 70px;
+    
+}
+
+#technical li{
+    display: inline;
+    margin: 10px;
+    
+}
+
+.table{
+    display: table;
+    margin: 0 auto;
+}
+
+
+
+/* End of About Me */
+
+
+
+/* Start of portolio */
+
+.projects{
+    min-height: 100vh;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.projects .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.projects .box-container .box{
+    height: 350px;
+    width: 540px;
+    margin: 16px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.projects .box-container .box img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+.projects .box-container .box .info{
+    height: 90%;
+    width: 90%;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+}
+
+.projects .box-container .box:hover .info{
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.projects .box-container .box .info h3{
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.projects .box-container .box .info p{
+    font-size: 1.2rem;
+    color: #666;
+    padding: 1rem 2rem;
+}
+
+.projects .box-container .box .info .btn{
+    width: 100%;
+    height: 100%;
+    border: 2px solid red;
+    background: red;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 10px 30px;
+}
+
+.projects .box-container .info .btn:hover{
+    color: red;
+    background: none;
+}
+
+
+
+
+
+
+
+/* end of portfolio  */
+
+/* contact Section */
+ .contact{
+     padding: 100px 0;
+     min-height: 100vh;
+     background: whitesmoke;
+ }
+
+.contact .contact-content{
+     display: flex;
+     flex-wrap: wrap;
+     align-items: center;
+     justify-content: space-between;
+ }
+
+ .contact .contact-content .column{
+     width: calc(50% - 30px);
+ }
+ .contact .contact-content .text{
+     font-size: 20px;
+     font-weight: 600;
+     margin-bottom: 10px;
+ }
+ .contact .contact-content .left p{
+     text-align: justify;
+     font-size: 15px;
+ }
+ .contact .contact-content .left .icons{
+     margin: 10px 0;
+ }
+ .contact .contact-content .row{
+     display: flex;
+     height: 65px;
+     align-items: center;
+ }
+ .contact .contact-content .row .info{
+     margin-left: 30px;
+     font-size: 15px;
+ }
+ .contact .contact-content .row i{
+     font-size: 25px;
+     color: red;
+ }
+
+ .contact .contact-content .info .head{
+     font-weight: 500;
+ }
+ .contact .contact-content .info .sub-title{
+     color: #333;
+ }
+.contact .right form .fields{
+    display: flex;
+}
+.contact .right form .field,
+.contact .right form .fields .field{
+    height: 45px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.contact .right form .textarea{
+    height: 80px;
+    width: 100%;
+}
+
+.contact .right form .name{
+    margin-right: 10px;
+}
+
+.contact .right form .email{
+    margin-left: 10px;
+}
+.contact .right form .field input,
+.contact .right form .textarea textarea{
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightgray;
+    border-radius: 6px;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+}
+
+.contact .right form .textarea textarea{
+    padding-top: 10px;
+    resize: none;
+}
+
+.contact .right form .button{
+    height: 47px;
+    width: 170px;
+}
+.contact .right form .button button{
+    width: 100%;
+    height: 100%;
+    border: 2px solid red;
+    background: red;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact .right form .button button:hover{
+    color: red;
+    background: none;
+}
+
+.status{
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    padding: 10px;
+    margin: 0 auto;
+    background: red;
+    color: white;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 600;
+    animation: status 4s ease forwards;
+}
+
+@keyframes status{
+    0%{
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    90%{
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    100%{
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
+
+/*End contact Section */
+
+
+/* responsive media query */
+
+@media (max-width: 947px){
+    .max-width{
+        padding: 0 50px;
+    }
+    .menu-btn{
+        display: block;
+        z-index: 999;
+
+    }
+    .menu-btn i.active:before{
+        content: "\f00d";
+    }
+    .navbar .menu{
+        position: fixed;
+        background: black;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+
+    .navbar .menu.active{
+        left: 0;
+    }
+
+
+    .navbar .menu li{
+        display: block;
+    }
+    .navbar .menu li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+    .home .home-content .text-2{
+        font-size: 60px;
+    }
+
+    .home .home-content .text-3{
+        font-size: 35px;
+    }
+    .home .home-content a{
+        font-size: 23px;
+        padding: 10px 30px;
+    }
+    .contact .contact-content .column{
+        width: 100%;
+        margin-bottom: 35px;
+    }
+}
+@media (max-width: 480px){
+    .home .home-content .text-1{
+        font-size: 25px;
+    }
+    
+    .home .home-content .text-2{
+        font-size: 50px;
+      
+    }
+    
+  
+
+}
+
+@media (max-width: 300px){
+    .home .home-content .text-1{
+        font-size: 15px;
+    }
+    
+    .home .home-content .text-2{
+        font-size: 25px;
+      
+    }
+    .home .home-content .text-3{
+        font-size: 20px;
+    }
+    
+    .home .home-content .text-3 span{
+        color: red;
+        font-weight: 600;
+    }
+    
+    .home .max-width .table ul li{
+        margin: 20px;
+        font-size: 20px;
+    
+  
+
+}
+
+}
